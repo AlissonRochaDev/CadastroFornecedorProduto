@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Lista de Produtos</title>
+</head>
+<body>
+    <header id="topo">
+        <nav class="menu">
+            <ul>
+                <li><a href="#" class="linkMenu">INÍCIO</a></li>
+                <li><a href="#" class="linkMenu">CLIENTES</a></li>
+                <li><a href="#" class="linkMenu">FORNECEDORES</a></li>
+                <li><a href="#" class="linkMenu">PRODUTOS</a></li>
+            </ul>
+        </nav>
+        <h1>Cadastro de Fornecedor/Produto.</h1>
+    </header>
+
+    <main id="container">
+        <section class="boxWork">
+            <div class="dadosFornecdor">
+                <h3>Dados do Fornecedor:</h3>
+            </div>
+            <div  class="pForm">
+                <form action="" method="POST" name="formFornecedor" onsubmit="return TratarFornecedor()">
+                    <div class="boxForm">
+                        <div>
+                            <label>Razão Social:</label>
+                            <input type="text" name="rSocial" id="rSocial" placeholder="Digite aqui...">
+
+                            <label>Nome Fantasia:</label>
+                            <input type="text" name="nomeF" id="nomeF" placeholder="Digite aqui..."> 
+                            
+                            <label>Inscrição Estadual:</label>
+                            <input type="text" name="insEstado" id="insEstado" placeholder="Digite aqui...">                       
+
+                            <label>CNPJ:</label>
+                            <input type="number" name="cnpj" id="cnpj" placeholder="Digite aqui...">
+
+                            <label>Endereço:</label>
+                            <input type="text" name="local" id="local" placeholder="Digite aqui...">
+
+                            <label>Bairro:</label>
+                            <input type="text" name="bairro" id="bairro" placeholder="Digite aqui..."> 
+
+                            <label>Município:</label>
+                            <input type="text" name="city" id="city" placeholder="Digite aqui...">
+                        </div>
+
+                        <div>
+                            <label>Inscrição Municipal:</label>
+                            <input type="text" name="insMunicipio" id="insMunicipio" placeholder="Digite aqui...">                    
+
+                            <label>CEP:</label>
+                            <input type="number" name="cep" id="cep" placeholder="Digite aqui...">
+
+                            <label>Número:</label>
+                            <input type="number" name="numero" id="numero" placeholder="Digite aqui...">
+
+                            <label>Complemento:</label>
+                            <input type="text" name="adc" id="adc" placeholder="Digite aqui...">
+
+                            <label>Estado:</label>
+                            <select name="estado" id="estado">
+                                <option value="">Selecione</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                                <option value="EX">Estrangeiro</option>
+                            </select>
+
+                            <label>E-mail:</label>
+                            <input type="email" name="email" id="email" placeholder="Digite aqui...">
+
+                            <label>Telefone (WhatsApp):</label>
+                            <input type="number" name="tele" id="tele" placeholder="Digite aqui...">
+                        </div>
+                    </div>
+
+                    <div class="nomeContato">
+                        <label>Nome da Pessoa de Contato:</label>
+                        <input type="text" name="contato" id="contato" placeholder="Digite aqui...">
+                    </div>  
+                    <button name="btnFornecedor" class="btnFornecedor">Adicionar Fornecedor</button>              
+                </form>
+            </div>
+        </section>
+
+        <section class="boxWork borderWork">
+            <div class="dadosProduto">
+                <h3>Dados do Produto:</h3>
+            </div>
+            <div class="boxWork">
+                <div  class="pForm">
+                    <h3>1º Produto</h3>
+                    <form action="" method="POST" name="formProductOne" onsubmit="return TratarProdutoOne()">
+                        <div class="alignProduct">
+                            <img src="./img/icone-produtos.png" alt="Produto!" title="Produto!" class="iconProduct">
+                            <div class="itemProduct">
+                                <div>
+                                    <label>Nome do Produto:</label>
+                                    <input type="text" name="produto" id="produto" placeholder="Digite aqui...">
+                                </div>
+
+                                <div class="alignItens">
+                                    <div class="alignItemForm">
+                                        <label>Unidade de Medida:</label>
+                                        <select name="uniMedida" id="uniMedida">
+                                            <option value="">Selecione</option>
+                                            <option value="1">Milímetro</option>
+                                            <option value="2">Centímetro</option>
+                                            <option value="3">Metro</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="alignItemForm">
+                                        <label>Quantidade em Estoque:</label>
+                                        <input type="number" name="quantidade" id="quantidade" placeholder="Digite aqui...">
+                                    </div>
+
+                                    <div class="alignItemForm">
+                                        <label>Valor em Estoque (R$):</label>
+                                        <input type="text" name="vEstoque" id="vEstoque" placeholder="Digite aqui...">
+                                    </div>
+
+                                    <div class="alignItemForm">
+                                        <label>Valor Total (R$):</label>
+                                        <input disabled type="text" name="total" id="total" placeholder="R$ 0,00">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button name="btnAddProduto" class="btnAddProduto">Adicionar Produto</button>   
+                    </form>
+                </div>
+            </div>
+
+            <div class="boxWork">
+                <div  class="pForm">
+                    <h3>2º Produto</h3>
+                    <form action="" method="POST" name="formProductTwo" onsubmit="return TratarProdutoTwo()">
+                        <div class="alignProduct">
+                            <img src="./img/icone-produtos.png" alt="Produto!" title="Produto!" class="iconProduct">
+                            <div class="itemProduct">
+                                <div>
+                                    <label>Nome do Produto:</label>
+                                    <input type="text" name="produto" id="produto" placeholder="Digite aqui...">
+                                </div>
+
+                                <div class="alignItens">
+                                    <div class="alignItemForm">
+                                        <label>Unidade de Medida:</label>
+                                        <select name="uniMedida" id="uniMedida">
+                                            <option value="">Selecione</option>
+                                            <option value="1">Milímetro</option>
+                                            <option value="2">Centímetro</option>
+                                            <option value="3">Metro</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="alignItemForm">
+                                        <label>Quantidade em Estoque:</label>
+                                        <input type="number" name="quantidade" id="quantidade" placeholder="Digite aqui...">
+                                    </div>
+
+                                    <div class="alignItemForm">
+                                        <label>Valor em Estoque (R$):</label>
+                                        <input type="text" name="vEstoque" id="vEstoque" placeholder="Digite aqui...">
+                                    </div>
+
+                                    <div class="alignItemForm">
+                                        <label>Valor Total (R$):</label>
+                                        <input disabled type="text" name="total" id="total" placeholder="R$ 0,00">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button name="btnAddProduto" class="btnAddProduto">Adicionar Produto</button>   
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="boxWork">
+            <div class="dadosFornecdor">
+                <h3>Informações Adicionadas:</h3>
+            </div>
+            <div class="boxItemAdd">
+                <a href="#">
+                    <img src="./img/icone-delete.png" alt="Excluir!" title="Excluir!" class="iconDelete">
+                </a>
+                <a href="#">
+                    <img src="./img/icone-view.png" alt="Visualizar!" title="Visualizar!" class="iconView">
+                </a>
+                <span>Fornecedor:</span>
+                <input disabled value="[ NOME DO FORNECEDOR ADICIONADO! ]" class="campDisabled">
+            </div>
+            
+            <div class="boxItemAdd">
+                <a href="#">
+                    <img src="./img/icone-delete.png" alt="Excluir!" title="Excluir!" class="iconDelete">
+                </a>
+                <a href="#">
+                    <img src="./img/icone-view.png" alt="Visualizar!" title="Visualizar!" class="iconView">
+                </a>
+                <span>Produto 1:</span>
+                <input disabled value="[ NOME DO PRODUTO ADICIONADO! ]" class="campDisabled">
+            </div>
+
+            <div class="boxItemAdd">
+                <a href="#">
+                    <img src="./img/icone-delete.png" alt="Excluir!" title="Excluir!" class="iconDelete">
+                </a>
+                <a href="#">
+                    <img src="./img/icone-view.png" alt="Visualizar!" title="Visualizar!" class="iconView">
+                </a>
+                <span>Produto 2:</span>
+                <input disabled value="[ NOME DO PRODUTO ADICIONADO! ]" class="campDisabled">
+            </div>
+        </section>
+    </main>
+
+    <footer class="end">
+        <p>
+            Este exercício simula a construção de uma tela de cadastro e consulta de Fornecedores e Produtos de um Sistema.
+        </p>
+    </footer>
+
+    <!-- Inserção do Arquivo Javascript para Tratamento de Campos! -->
+    <script src="./js/notificar.js"></script>
+</body>
+</html>
